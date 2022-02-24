@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/gametech.ogg-500074588b19cc070a4548993fceb1a3.oggstr"
+
+[deps]
+
+source_file="res://Assets/gametech.ogg"
+dest_files=[ "res://.import/gametech.ogg-500074588b19cc070a4548993fceb1a3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
