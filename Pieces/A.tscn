@@ -3,4 +3,4 @@
 [ext_resource path="res://Pieces/Piece.tscn" type="PackedScene" id=1]
 
 [node name="Piece" instance=ExtResource( 1 )]
-color = "A"
+color = "sword-done or var"
