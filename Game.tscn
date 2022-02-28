@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Assets/3.wav" type="AudioStream" id=9]
 [ext_resource path="res://Assets/2.wav" type="AudioStream" id=10]
 [ext_resource path="res://UI/Music.gd" type="Script" id=11]
+[ext_resource path="res://Assets/nature background.png" type="Texture" id=12]
+[ext_resource path="res://Baground Container.gd" type="Script" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 18
@@ -18,7 +20,16 @@ font_data = ExtResource( 6 )
 
 [node name="Game" type="Node2D"]
 
+[node name="Baground Container" type="Node2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="Background" type="Sprite" parent="Baground Container"]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+centered = false
+
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 5 )
 centered = false
 

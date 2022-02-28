@@ -21,9 +21,9 @@ var sound_3 = null
 
 var Coin = preload("res://Coin/Coin.tscn")
 
-func _ready():
-	$Select.texture = $Sprite.texture
-	$Select.scale = $Sprite.scale
+#func _ready():
+	#$Select.texture = $AnimatedSprite.texture
+	#$Select.scale = $AnimatedSprite.scale
 
 func _physics_process(_delta):
 	if dying:
