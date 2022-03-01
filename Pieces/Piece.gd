@@ -21,9 +21,8 @@ var sound_3 = null
 
 var Coin = preload("res://Coin/Coin.tscn")
 
-#func _ready():
-	#$Select.texture = $AnimatedSprite.texture
-	#$Select.scale = $AnimatedSprite.scale
+func _ready():
+	wiggle = randf()
 
 func _physics_process(_delta):
 	if dying:
@@ -36,7 +35,10 @@ func _physics_process(_delta):
 	else:
 		$Select.hide()
 		$Selected.emitting = false
+	wiggle += 0.1
+	position.x = target_position.x + (sin(wiggle)*wiggle_amount)
 
+	
 func generate(pos):
 	position = Vector2(pos.x,-100)
 	target_position = pos
@@ -44,6 +46,8 @@ func generate(pos):
 		sound_1 = get_node_or_null("/root/Game/1")
 	if sound_1 != null:
 		sound_1.play()
+	$Tween.interpolate_property(self, "position", position, target_position, randf()+0.5, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
+	$Tween.start()
 
 func move_piece(change):
 	target_position = target_position + change
@@ -51,6 +55,8 @@ func move_piece(change):
 		sound_2 = get_node_or_null("/root/Game/2")
 	if sound_2 != null:
 		sound_2.play()
+	$Tween.interpolate_property(self, "position", position, target_position, 0.5, Tween.TRANS_LINEAR, Tween.EASE_IN)
+	$Tween.start()
 
 func die():
 	dying = true;
@@ -64,3 +70,7 @@ func die():
 		var coin = Coin.instance()
 		coin.position = target_position
 		Effects.add_child(coin)
+
+
+func _on_Timer_timeout():
+	pass # Replace with function body.

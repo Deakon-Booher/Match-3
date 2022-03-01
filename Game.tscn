@@ -6,10 +6,10 @@
 [ext_resource path="res://Assets/coin_small.png" type="Texture" id=4]
 [ext_resource path="res://Assets/background2.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Ignotum.otf" type="DynamicFontData" id=6]
-[ext_resource path="res://Assets/Music.ogg" type="AudioStream" id=7]
-[ext_resource path="res://Assets/1.wav" type="AudioStream" id=8]
-[ext_resource path="res://Assets/3.wav" type="AudioStream" id=9]
-[ext_resource path="res://Assets/2.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/351422__diramus__wood-crack.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/180828__32cheeseman32__swordclash09.wav" type="AudioStream" id=8]
+[ext_resource path="res://Assets/399034__user391915396__medieval-guitar-loop.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/542517__matthewholdensound__owi-bow-srting-2.wav" type="AudioStream" id=10]
 [ext_resource path="res://UI/Music.gd" type="Script" id=11]
 [ext_resource path="res://Assets/nature background.png" type="Texture" id=12]
 [ext_resource path="res://Baground Container.gd" type="Script" id=13]
@@ -76,17 +76,17 @@ __meta__ = {
 }
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 9 )
 autoplay = true
 script = ExtResource( 11 )
 
 [node name="1" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
-
-[node name="2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
 
+[node name="2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
 [node name="3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 7 )
 
 [connection signal="finished" from="Music" to="Music" method="_on_Music_finished"]
