@@ -1,9 +1,9 @@
 
-# Exercise-03c-Music-and-Sound
+# Project 03-Juicy Match-3
 
-Exercise for MSCH-C220
+Project for MSCH-C220
 
-Adding music, sound, typeface changes, and several "juicy" features to a simple match-3 game.
+Taking a base match 3 game and adding as much juice to it as possible to increase player enjoyment.
 
 ## To play
 
@@ -13,6 +13,17 @@ Select and drag tiles using the mouse.
 ## Implementation
 
 Built using Godot 3.4.2
+
+-animated sprites
+-background image playlist that changes at certain scores
+-music track
+-sound effects
+-tile wiggle
+-tiles drop down into the grid
+-tiles slide to where they are supposed to go
+-coin effect when match in made
+-particles when a tile is selected
+
 
 ## References
  * [Juice it or lose it — a talk by Martin Jonasson & Petri Purho](https://www.youtube.com/watch?v=Fy0aCDmgnxg)
@@ -27,7 +38,7 @@ Built using Godot 3.4.2
 
 ## Future Development
 
-Shaders
+none
 
 ## Created by
 Deakon Booher
